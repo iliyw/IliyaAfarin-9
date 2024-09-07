@@ -1,0 +1,275 @@
+:root {
+    font-family: "playfairLight";
+}
+@font-face {
+    font-family: playfairLight;
+    src: url("../Public/Fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: playfairBold;
+    src: url("../Public/Fonts/PlayfairDisplay-Medium.ttf");
+}
+/***** Start header part *****/
+
+.logo img {
+    max-width: 160px;
+}
+header .navbar .nav {
+    color: #000;
+    display: flex;
+    gap: 25px;
+}
+header .navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+header .navbar .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+@media (max-width: 768px) {
+    header .header-info {
+        margin: 0 auto;
+    }
+    header .navbar .hamburger {
+        display: block;
+    }
+    header .navbar .hamburger:active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    header .navbar .hamburger:active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    header .navbar .hamburger:active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header .navbar .nav {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    header .navbar .nav .nav-item {
+        margin: 16px 0;
+    }
+    header .navbar .nav:active {
+        left: 0;
+    }
+}
+header .navbar .nav .nav-item {
+    position: relative;
+}
+header .navbar .nav .nav-item a {
+    transition: 0.7s ease;
+}
+
+header .navbar .nav .nav-item::before {
+    content: "";
+    height: 1.5px;
+    width: 0;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+header .navbar .nav .nav-item:hover::before {
+    width: 100%;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10vw;
+}
+header .header-info {
+    color: #fff;
+    position: absolute;
+    right: 13%;
+    top: 20%;
+    text-align: center;
+    line-height: 60px;
+}
+header .header-info h1 {
+    font-family: "playfairBold";
+    font-weight: 100;
+    font-size: 30px;
+}
+header .header-info a {
+    border: 1px solid white;
+    padding: 10px;
+}
+main {
+    padding: 5rem 2rem;
+}
+main .product {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+main .product .product-info {
+    max-width: 573px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 25px;
+}
+main .product .product-info h1 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    text-align: center;
+}
+main .product .product-info ul li {
+    margin-left: 20px;
+}
+main .product .product-img {
+    max-width: 493px;
+    width: 100%;
+    max-height: 409px;
+}
+@media (max-width: 768px) {
+    main .product {
+        flex-direction: column;
+        align-items: center;
+    }
+    main .product .product-img {
+        max-width: 350px;
+        max-height: 400px;
+    }
+}
+main ul {
+    list-style-type: disc;
+}
+.dotes {
+    max-width: 50px;
+    margin: 2rem auto;
+}
+main .cosmetics-part {
+    text-align: center;
+    margin: 0px 5rem;
+}
+main .cosmetics-part .cosmetics-boxes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 3rem;
+}
+main .cosmetics-part .cosmetics-boxes .cosmetics-box {
+    max-width: 200px;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+main .cosmetics-part .cosmetics-boxes .cosmetics-box .img-box {
+    overflow: hidden;
+}
+main .cosmetics-part .cosmetics-boxes .cosmetics-box img {
+    transition: 0.4s;
+}
+main .cosmetics-part .cosmetics-boxes .cosmetics-box img:hover {
+    transform: scale(1.1);
+}
+main .cosmetics-part .cosmetics-boxes .cosmetics-box p {
+    padding-top: 10px;
+}
+.pt-4 {
+    padding-top: 4rem;
+}
+/***** Start responsive cosmetics part *****/
+/* @media (max-width: 1100px) {
+    main .cosmetics-part .cosmetics-boxes {
+        grid-template-columns: auto auto auto;
+    }
+} */
+@media (max-width: 1100px) {
+    main .cosmetics-part {
+        padding-top: 3rem;
+    }
+    main .cosmetics-part .cosmetics-boxes {
+        grid-template-columns: auto auto;
+    }
+    main .cosmetics-part .cosmetics-boxes {
+        padding-top: 1.5rem;
+    }
+}
+@media (max-width: 650px) {
+    main .cosmetics-part .cosmetics-boxes {
+        grid-template-columns: auto;
+    }
+}
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+}
+footer .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+footer .footer-menu .menu-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+    flex-grow: 1;
+}
+footer .footer-menu .menu-side .menu-links {
+    position: relative;
+}
+footer .footer-menu .menu-side .menu-links::before {
+    content: "";
+    height: 1.5px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+footer .footer-menu .menu-side .menu-links:hover::before {
+    width: 100%;
+}
+footer .footer-menu .menu-side:nth-child(2),
+.menu-side:last-child {
+    border-left: 2px solid grey;
+}
+footer .end-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 7px;
+}
+@media (max-width: 768px) {
+    footer .footer-menu {
+        flex-direction: column;
+        padding: 0;
+    }
+    footer .footer-menu .menu-side {
+        padding: 1rem 0;
+    }
+    footer .footer-menu .menu-side:nth-child(2),
+    .menu-side:last-child {
+        border: none;
+    }
+    footer .footer-menu .menu-side:nth-child(2),
+    .menu-side:first-child {
+        border-bottom: 2px solid grey;
+    }
+}

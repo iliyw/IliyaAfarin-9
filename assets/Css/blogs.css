@@ -1,0 +1,274 @@
+:root {
+    font-family: "playfairLight";
+}
+@font-face {
+    font-family: playfairLight;
+    src: url("../Public/Fonts/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: playfairBold;
+    src: url("../Public/Fonts/PlayfairDisplay-Medium.ttf");
+}
+/***** Start header part *****/
+
+.logo img {
+    max-width: 160px;
+}
+header .navbar .nav {
+    color: #000;
+    display: flex;
+    gap: 25px;
+}
+header .navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+header .navbar .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+@media (max-width: 768px) {
+    header .header-info {
+        margin: 0 auto;
+    }
+    header .navbar .hamburger {
+        display: block;
+    }
+    header .navbar .hamburger:active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    header .navbar .hamburger:active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    header .navbar .hamburger:active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header .navbar .nav {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    header .navbar .nav .nav-item {
+        margin: 16px 0;
+    }
+    header .navbar .nav:active {
+        left: 0;
+    }
+}
+header .navbar .nav .nav-item {
+    position: relative;
+}
+header .navbar .nav .nav-item a {
+    transition: 0.7s ease;
+}
+
+header .navbar .nav .nav-item::before {
+    content: "";
+    height: 1.5px;
+    width: 0;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+header .navbar .nav .nav-item:hover::before {
+    width: 100%;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10vw;
+}
+header .header-info {
+    color: #fff;
+    position: absolute;
+    right: 13%;
+    top: 20%;
+    text-align: center;
+    line-height: 60px;
+}
+header .header-info h1 {
+    font-family: "playfairBold";
+    font-weight: 100;
+    font-size: 30px;
+}
+header .header-info a {
+    border: 1px solid white;
+    padding: 10px;
+}
+main h1 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+main .blogs-part {
+    text-align: center;
+    border-top: 1px solid grey;
+    margin: 2rem 5rem;
+}
+main .blogs-part:last-child {
+    border-bottom: 1px solid grey;
+}
+/***** Start blogs part *****/
+main .blogs-part .blogs {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+main .blogs-part .blogs .blog {
+    min-width: 250px;
+    min-height: 315px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    transition: 0.4s;
+}
+main .blogs-part .blogs .blog:hover {
+    transform: scale(1.05);
+}
+main .blogs-part .blogs .blog a {
+    position: absolute;
+    bottom: 10px;
+}
+.face-part .blog:first-child {
+    background-image: url("../Public/Images/Cleanser 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.face-part .blog:nth-child(2) {
+    background-image: url("../Public/Images/eye1-patches\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.face-part .blog:last-child {
+    background-image: url("../Public/Images/mask\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-part .blog:first-child {
+    background-image: url("../Public/Images/Body-scrab\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-part .blog:nth-child(2) {
+    background-image: url("../Public/Images/body-lotion\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-part .blog:last-child {
+    background-image: url("../Public/Images/body-oil\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hair-part .blog:first-child {
+    background-image: url("../Public/Images/blog-hairbrush\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hair-part .blog:nth-child(2) {
+    background-image: url("../Public/Images/Hair\ Styling\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hair-part .blog:last-child {
+    background-image: url("../Public/Images/blogs-split\ ends\ 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.more-sec {
+    text-align: center;
+    padding: 4rem 0;
+}
+.more-sec .more-btn {
+    border: 1px solid black;
+    padding: 8px 40px;
+}
+
+/***** End blogs part *****/
+.pt-2 {
+    padding-top: 2rem;
+}
+/***** Start footer part *****/
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 2rem 5rem;
+}
+footer .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+}
+footer .footer-menu .menu-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+    flex-grow: 1;
+}
+footer .footer-menu .menu-side .menu-links {
+    position: relative;
+}
+footer .footer-menu .menu-side .menu-links::before {
+    content: "";
+    height: 1.5px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+footer .footer-menu .menu-side .menu-links:hover::before {
+    width: 100%;
+}
+footer .footer-menu .menu-side:nth-child(2),
+.menu-side:last-child {
+    border-left: 2px solid grey;
+}
+footer .end-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 7px;
+}
+@media (max-width: 768px) {
+    footer .footer-menu {
+        flex-direction: column;
+        padding: 0;
+    }
+    footer .footer-menu .menu-side {
+        padding: 1rem 0;
+    }
+    footer .footer-menu .menu-side:nth-child(2),
+    .menu-side:last-child {
+        border: none;
+    }
+    footer .footer-menu .menu-side:nth-child(2),
+    .menu-side:first-child {
+        border-bottom: 2px solid grey;
+    }
+}
